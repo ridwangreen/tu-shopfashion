@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ShopFashionActivity!</string>
+    <string name="app_name">ShopFashion</string>
+    <string name="gioithieuct">Shop Fashion được thành lập từ năm 2010 và cũng là hệ thống cửa hàng giá rẻ đầu tiên tại Việt Nam. Với phương châm Luôn bán với giá thấp hơn, chúng tôi cam kết sẽ mang lại cho khách hàng những sản phẩm có chất lượng đảm bảo và chi phí ngày càng thấp.</string>
+    <string name="diachi">Địa chỉ: Số 20 ngõ 5, đường Liễu Giai, Ba Đình , Hà Nội.</string>
+
+    <string-array name="country_arrays1">
+        <item>Ha Nam</item>
+        <item>Ha Noi</item>
+        <item>Vinh Phuc</item>
+        <item>Ha Giang</item>
+        <item>Tp.Ho Chi Minh</item>
+        <item>Hue</item>      
+    </string-array>
+    <string-array name="country_arrays2">
+        <item>Vietnames</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+    
+
+</resources>

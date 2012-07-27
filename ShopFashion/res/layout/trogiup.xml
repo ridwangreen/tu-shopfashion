@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="GIỚI THIỆU"
+            android:textColor="#f19a18"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/gioithieuct"
+            android:textColor="#672500"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="LIÊN HỆ:"
+            android:textColor="#672500"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/diachi"
+            android:textColor="#672500"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Website: http://tinhocsp2.net/fashion"
+            android:textColor="#672500"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Hotline:"
+                android:textColor="#672500"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_hotline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0168 300 5287"
+                android:textColor="#672500"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:background="#659823" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="HƯỚNG DẪN SỬ DỤNG"
+            android:textColor="#f19a18"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="HOME: Là màn hình chứa các sản phẩm mới nhập của cửa hàng."
+            android:textColor="#672500"
+            android:textSize="14dp" />
+        
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="SẢN PHẨM: Là màn hình chứa danh mục sản phẩm. Bạn có thể click để lựa chọn loại sản phẩm bạn mong muốn."
+            android:textColor="#672500"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#672500"
+            android:text="GIỎ HÀNG: Chứa sản phẩm bạn đã chọn mua."
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="TRỢ GIÚP: Là màn hình giới thiệu công ty cung cấp sản phẩm và hướng dẫn sử dụng phần mềm FASHIONN SHOP."
+            android:textColor="#672500"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</ScrollView>

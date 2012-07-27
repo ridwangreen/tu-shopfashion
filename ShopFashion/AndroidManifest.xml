@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.ShopFashion"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/ic_launcher2"
+        android:label="@string/app_name" 
+       >
+        <activity
+            android:name=".ShopFashionActivity"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name=".giohangAdapter"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name=".itemproductAdapter"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name=".giohang"
+            android:label="@string/app_name" >
+           
+        </activity>
+        <activity
+            android:name=".muangay"
+            android:label="@string/app_name" >
+           
+        </activity>
+         <activity
+            android:name=".itemproduct"
+            android:label="@string/app_name" >
+           
+        </activity>
+       
+        <activity
+            android:name=".ProductActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".product_detail"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Tab_GioHang"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Tab_Home"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".giohang_btnCart"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Tab_SanPham"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Tab_TroGiup"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Tab_TabHost"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>
+        <activity
+            android:name=".ProductNewActivity"
+            android:label="@string/app_name" >
+           
+        </activity>
+    </application>
+
+</manifest>
