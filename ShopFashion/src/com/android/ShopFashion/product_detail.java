@@ -75,9 +75,12 @@ public class product_detail extends Activity{
 			
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i = new Intent(product_detail.this, muangay.class);				
-				i.putExtra("name", name);				
-				i.putExtra("price", price );				
+				Intent i = new Intent(product_detail.this, muangay.class);	
+				String name = p.getName();
+				i.putExtra("name", name);	
+				String price = p.getPrice()+"";
+				i.putExtra("price", price );	
+				String image = p.getUrl_thumb();
 				i.putExtra("image", image );
 				startActivity(i);
 			}
