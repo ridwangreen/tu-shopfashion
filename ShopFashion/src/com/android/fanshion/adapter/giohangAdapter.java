@@ -58,7 +58,7 @@ public class giohangAdapter extends BaseAdapter{
 
 		// Đẩy dữ liệu vào item
 		/* Product p = mListProduct.get(positon); */
-		holder.name.setText(mListProduct.get(positon).getName());		
+		holder.name.setText(mListProduct.get(positon).getProduct_name());		
 
 		holder.price.setText(mListProduct.get(positon).getPrice() + "");
 		

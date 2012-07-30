@@ -13,16 +13,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.entity.Product;
+import com.android.fanshion.adapter.ProductNewAdapter;
 import com.android.fanshion.adapter.giohangAdapter;
 
-public class Tab_GioHang extends Activity {
-	giohangAdapter adapter;
+public class TabCart extends Activity {
+	ProductNewAdapter adapter;
 	ListView list;
 	InputStream is;
 	String mResult;// --
 	Button btnCart;
 	TextView name;
-	public static ArrayList<Product> listProduct = new ArrayList<Product>();
+	public static ArrayList<Product> listProductCart = new ArrayList<Product>();
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,18 +34,28 @@ public class Tab_GioHang extends Activity {
 			
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-			Intent i = new Intent(Tab_GioHang.this,giohang_btnCart.class);
+			Intent i = new Intent(TabCart.this,giohang_btnCart.class);
 			startActivity(i);
 			}
 		});
 		list = (ListView) findViewById(R.id.lv_gio_hang);	
-		
-		
-		if (listProduct.size() > 0) {
-			adapter = new giohangAdapter(getApplicationContext(), listProduct);
-			list.setAdapter(adapter);
-		}
+		adapter = new ProductNewAdapter(getApplicationContext(), listProductCart);
+		list.setAdapter(adapter);
 
+
+	}
+	@Override
+	protected void onResume() {
+		adapter.notifyDataSetChanged();
+		super.onResume();
+	}
+	public static void addInListCart(Product p){
+		if(!listProductCart.contains(p))
+		listProductCart.add(p);
+	}
+	
+	public static void removeProductCart(Product p){
+		if(listProductCart.contains(p)) listProductCart.remove(listProductCart.indexOf(p));
 	}
 	
 	

@@ -2,29 +2,32 @@ package com.android.fanshion.adapter;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.ShopFashion.ListProductActivity;
 import com.android.ShopFashion.R;
-import com.android.entity.Product;
-
+import com.android.ShopFashion.product_detail;
+import com.android.entity.Category;
 import com.android.fanshion.ImageCache.ImageDownloader;
 
 
-public class ProductAdapter extends BaseAdapter {
+public class CategoryAdapter extends BaseAdapter {
 	Context mContext;
-	ArrayList<Product> searchArrayList;
+	ArrayList<Category> lstCategory;
 	LayoutInflater mInflater;
 	private final ImageDownloader imageDownloader = new ImageDownloader();
 	
-	public ProductAdapter(Context context, ArrayList<Product> results) {
-		searchArrayList = results;
+	public CategoryAdapter(Context context, ArrayList<Category> lstCategory) {
+		this.lstCategory = lstCategory;
 		mInflater = LayoutInflater.from(context);
 	}
 	
@@ -33,12 +36,12 @@ public class ProductAdapter extends BaseAdapter {
 	    }
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return searchArrayList.size();
+		return lstCategory.size();
 	}
 
 	public Object getItem(int position) {
 		// TODO Auto-generated method stub
-		return searchArrayList.get(position);
+		return lstCategory.get(position);
 	}
 
 	public long getItemId(int position) {
@@ -46,7 +49,7 @@ public class ProductAdapter extends BaseAdapter {
 		return position;
 	}
 
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ViewHolder holder;
 		View vi = convertView;
@@ -54,24 +57,34 @@ public class ProductAdapter extends BaseAdapter {
 			vi = mInflater.inflate(R.layout.customview_product, null);
 			holder = new ViewHolder();
 			holder.txtName = (TextView) vi.findViewById(R.id.txt_product);
-			holder.txtDescription = (TextView) vi.findViewById(R.id.txt_description_product);
 			holder.imgProduct = (ImageView) vi.findViewById(R.id.img_product);
 			vi.setTag(holder);
 		} else {
 			holder = (ViewHolder) vi.getTag();
 		}
-		holder.txtName.setText(searchArrayList.get(position).getTxtName());
-		holder.txtDescription.setText(searchArrayList.get(position).getTxtDescription());
-		//Truyền vào Url ảnh và ImageView để nạp ảnh vào View và lưu vào thẻ nhớ
-		//Ép kiểu Context thành kiểu Activity
-		imageDownloader.download(searchArrayList.get(position).getUrl_thumb(), holder.imgProduct);
+		holder.txtName.setText(lstCategory.get(position).getCategoryName());
+		imageDownloader.download(lstCategory.get(position).getCategoryUrl(), holder.imgProduct);
+/*		vi.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				try {
+					Intent i = new Intent(mContext, ListProductActivity.class);
+					i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					i.putExtra("id", lstCategory.get(position).getId());
+					mContext.startActivity(i);
+				} catch (Exception e) {
+					Log.d("LOI NE",e.getMessage());
+				}
+				
+			}
+		});*/
 		return vi;
 
 	}
 
 	static class ViewHolder {
 		TextView txtName;
-		TextView txtDescription;
 		ImageView imgProduct;
 	}
 

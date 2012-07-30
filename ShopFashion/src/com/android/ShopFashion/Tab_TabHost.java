@@ -37,14 +37,9 @@ public class Tab_TabHost extends TabActivity {
 				.setContent(intent);
 		mTabHost.addTab(spec);
 
-		/*
-		 * ViewPager myPager = (ViewPager) findViewById(R.id.m_page_view);
-		 * adapter = new PageViewAdapter(); myPager.setAdapter(adapter);
-		 * myPager.setCurrentItem(0);
-		 */
 
 		// Liên He Tab
-		intent = new Intent().setClass(this, Tab_GioHang.class);
+		intent = new Intent().setClass(this, TabCart.class);
 		spec = mTabHost.newTabSpec("giỏ hàng")
 				.setIndicator("Giỏ Hàng", res.getDrawable(R.drawable.giohang))
 				.setContent(intent);

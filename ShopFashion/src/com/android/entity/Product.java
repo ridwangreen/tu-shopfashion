@@ -1,7 +1,11 @@
 package com.android.entity;
 
+import java.io.Serializable;
 
-public class Product {
+
+public class Product implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private String txtName = "";
 	private String txtDescription = "";
 	private String url_thumb = "";
@@ -47,7 +51,7 @@ public class Product {
 		this.url_thumb = url_thumb;
 	}
 
-	String product_id;
+	int product_id;
 	private String url_small;
 	String url_medium;
 	private String url_large;
@@ -86,11 +90,11 @@ public class Product {
 	int quantity_on_hand;
 	int parent;
 
-	public String getProduct_id() {
+	public int getProduct_id() {
 		return product_id;
 	}
 
-	public void setProduct_id(String product_id) {
+	public void setProduct_id(int product_id) {
 		this.product_id = product_id;
 	}
 
