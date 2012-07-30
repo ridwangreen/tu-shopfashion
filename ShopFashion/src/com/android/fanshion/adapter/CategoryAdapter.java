@@ -64,21 +64,7 @@ public class CategoryAdapter extends BaseAdapter {
 		}
 		holder.txtName.setText(lstCategory.get(position).getCategoryName());
 		imageDownloader.download(lstCategory.get(position).getCategoryUrl(), holder.imgProduct);
-/*		vi.setOnClickListener(new OnClickListener() {
-			
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				try {
-					Intent i = new Intent(mContext, ListProductActivity.class);
-					i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					i.putExtra("id", lstCategory.get(position).getId());
-					mContext.startActivity(i);
-				} catch (Exception e) {
-					Log.d("LOI NE",e.getMessage());
-				}
-				
-			}
-		});*/
+
 		return vi;
 
 	}
