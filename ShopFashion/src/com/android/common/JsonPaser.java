@@ -73,9 +73,12 @@ public class JsonPaser {
 			for (int i = 0; i < cateArray.length(); i++) {
 				categoryJson = cateArray.getJSONObject(i);
 				category = new Category();
-				if (categoryJson.opt("image") != null) {
+				/*if (categoryJson.opt("image") != null) {
 					category.setCategoryUrl(Constant.URL_IMAGE
 							+ categoryJson.getString("image"));
+				}*/
+				if (categoryJson.opt("image") != null) {
+					category.setCategoryUrl(categoryJson.getString("image"));
 				}
 				if (categoryJson.opt("name") != null) {
 					category.setCategoryName(categoryJson.getString("name"));

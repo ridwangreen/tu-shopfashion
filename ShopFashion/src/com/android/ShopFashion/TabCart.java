@@ -19,6 +19,7 @@ import com.android.fanshion.adapter.giohangAdapter;
 public class TabCart extends Activity {
 	ProductNewAdapter adapter;
 	ListView list;
+	TextView txtThanhTien;
 	InputStream is;
 	String mResult;// --
 	Button btnCart;
@@ -28,8 +29,9 @@ public class TabCart extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gio_hang);
-		
+		txtThanhTien = (TextView) findViewById(R.id.txt_thanhtien);
 		btnCart = (Button) findViewById(R.id.btn_cart);
+		
 		btnCart.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View arg0) {
@@ -47,6 +49,7 @@ public class TabCart extends Activity {
 	@Override
 	protected void onResume() {
 		adapter.notifyDataSetChanged();
+		txtThanhTien.setText(tinhTien()+"");
 		super.onResume();
 	}
 	public static void addInListCart(Product p){
@@ -57,7 +60,13 @@ public class TabCart extends Activity {
 	public static void removeProductCart(Product p){
 		if(listProductCart.contains(p)) listProductCart.remove(listProductCart.indexOf(p));
 	}
-	
+	public Double tinhTien(){
+		Double tong=0.0;
+		for (Product p : listProductCart) {
+			tong = tong+ (p.getPrice()*p.getSold());
+		}
+		return tong;
+	}
 	
 
 	

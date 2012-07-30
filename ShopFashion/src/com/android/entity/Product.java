@@ -85,7 +85,7 @@ public class Product implements Serializable {
 		this.name = name;
 	}
 
-	int sold;
+	int sold=1;
 	int visited;
 	int quantity_on_hand;
 	int parent;
