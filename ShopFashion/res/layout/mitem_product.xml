@@ -25,7 +25,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="6dp"
             android:background="@drawable/tag_new"
-            android:visibility="visible" >
+            android:visibility="invisible" >
         </LinearLayout>
     </RelativeLayout>
 
@@ -121,16 +121,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:text="Liên hệ:"
+                android:text="Mô tả:"
                 android:textColor="#672500"
                 android:textSize="8dp" />
 
             <TextView
+                android:id="@+id/txtDetailShort"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="2dp"
                 android:paddingRight="9dp"
-                android:text="01683005287. Số 20 ngõ 5, đường Liễu Giai, Ba Đình, Hà Nội"
                 android:textColor="#672500"
                 android:textSize="8dp" />
         </LinearLayout>

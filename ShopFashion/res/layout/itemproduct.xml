@@ -110,11 +110,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:text="Liên hệ:"
+                android:text="Mô tả:"
                 android:textColor="#672500"
                 android:textSize="8dp" />
 
             <TextView
+                android:id="@+id/txtDes"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="2dp"

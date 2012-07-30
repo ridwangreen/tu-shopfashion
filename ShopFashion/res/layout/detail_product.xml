@@ -14,29 +14,28 @@
         android:textColor="#FFFFFF"
         android:gravity="center"
         android:textStyle="bold" />
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5.4dp"
+        android:orientation="vertical"
         android:background="@drawable/detail_product1" >
 
         <TextView
             android:id="@+id/name_detail_product"
             android:layout_width="100dp"
             android:layout_height="16dp"
-            android:layout_marginLeft="12dp"
             android:layout_marginTop="6dp"
+            android:layout_marginLeft="42dp"
             android:textColor="#672500" />
 
         <ImageView
             android:id="@+id/img_detail_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name_detail_product"
-            android:layout_marginLeft="51dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="230dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/detail_product3" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
